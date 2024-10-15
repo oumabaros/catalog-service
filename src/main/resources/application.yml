@@ -9,6 +9,5 @@ server:
         threads:
             max: 50
             min-spare: 5
-org:
-    gradle:
-        caching: false
+polar:
+    greeting: Welcome to the local book catalog!
