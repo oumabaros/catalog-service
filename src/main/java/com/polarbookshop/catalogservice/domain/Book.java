@@ -15,7 +15,7 @@ import org.springframework.data.annotation.Version;
 public record Book(
 
                 @Id Long id,
-
+        
                 @NotBlank(message = "The book ISBN must be defined.") @Pattern(regexp = "^([0-9]{10}|[0-9]{13})$", message = "The ISBN format must be valid.") String isbn,
 
                 @NotBlank(message = "The book title must be defined.") String title,
@@ -24,9 +24,11 @@ public record Book(
 
                 @NotNull(message = "The book price must be defined.") @Positive(message = "The book price must be greater than zero.") Double price,
 
-                @CreatedDate Instant createdDate,
+                @CreatedDate 
+                Instant createdDate,
 
-                @LastModifiedDate Instant lastModifiedDate,
+                @LastModifiedDate 
+                Instant lastModifiedDate,
 
                 @Version int version
 
