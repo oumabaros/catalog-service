@@ -12,30 +12,40 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
 
-public record Book(
+public record Book (
 
-                @Id Long id,
-        
-                @NotBlank(message = "The book ISBN must be defined.") @Pattern(regexp = "^([0-9]{10}|[0-9]{13})$", message = "The ISBN format must be valid.") String isbn,
+        @Id
+        Long id,
 
-                @NotBlank(message = "The book title must be defined.") String title,
+        @NotBlank(message = "The book ISBN must be defined.")
+		@Pattern(regexp = "^([0-9]{10}|[0-9]{13})$", message = "The ISBN format must be valid.")
+        String isbn,
 
-                @NotBlank(message = "The book author must be defined.") String author,
+        @NotBlank(message = "The book title must be defined.")
+        String title,
 
-                @NotNull(message = "The book price must be defined.") @Positive(message = "The book price must be greater than zero.") Double price,
+        @NotBlank(message = "The book author must be defined.")
+        String author,
 
-                @CreatedDate 
-                Instant createdDate,
+        @NotNull(message = "The book price must be defined.")
+        @Positive(message = "The book price must be greater than zero.")
+        Double price,
 
-                @LastModifiedDate 
-                Instant lastModifiedDate,
+        String publisher,
 
-                @Version int version
+        @CreatedDate
+        Instant createdDate,
 
-) {
+        @LastModifiedDate
+        Instant lastModifiedDate,
 
-        public static Book of(String isbn, String title, String author, Double price) {
-                return new Book(null, isbn, title, author, price, null, null, 0);
+        @Version
+        int version
+
+){
+
+        public static Book of(String isbn, String title, String author, Double price, String publisher) {
+                return new Book(null, isbn, title, author, price, publisher, null, null, 0);
         }
 
 }
