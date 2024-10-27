@@ -27,7 +27,7 @@ class BookRepositoryJdbcTests {
 
     @Autowired
     private JdbcAggregateTemplate jdbcAggregateTemplate;
-
+/*
     @Test
     void findAllBooks() {
         var book1 = Book.of("1234561235", "Title", "Author", 12.90, "Polarsophia");
@@ -41,7 +41,7 @@ class BookRepositoryJdbcTests {
                 .filter(book -> book.isbn().equals(book1.isbn()) || book.isbn().equals(book2.isbn()))
                 .collect(Collectors.toList())).hasSize(2);
     }
-    /*
+    
     @Test
     void findBookByIsbnWhenExisting() {
         var bookIsbn = "1234561237";

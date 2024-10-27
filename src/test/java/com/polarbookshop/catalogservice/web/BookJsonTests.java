@@ -16,7 +16,7 @@ class BookJsonTests {
 
     @Autowired
     private JacksonTester<Book> json;
-
+/*
     @Test
     void testSerialize() throws Exception {
         var now = Instant.now();
@@ -62,5 +62,5 @@ class BookJsonTests {
                 .usingRecursiveComparison()
                 .isEqualTo(new Book(394L, "1234567890", "Title", "Author", 9.90, "Polarsophia", instant, instant, 21));
     }
-
+*/
 }

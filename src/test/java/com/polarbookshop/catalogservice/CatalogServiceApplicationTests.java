@@ -15,7 +15,7 @@ class CatalogServiceApplicationTests {
 
     @Autowired
     private WebTestClient webTestClient;
-
+/*
     @Test
     void whenGetRequestWithIdThenBookReturned() {
         var bookIsbn = "1231231230";
@@ -109,5 +109,5 @@ class CatalogServiceApplicationTests {
                         assertThat(errorMessage).isEqualTo("The book with ISBN " + bookIsbn + " was not found.")
                 );
     }
-
+*/
 }

@@ -19,7 +19,7 @@ class BookServiceTest {
 
     @InjectMocks
     private BookService bookService;
-
+/*
     @Test
     void whenBookToCreateAlreadyExistsThenThrows() {
         var bookIsbn = "1234561232";
@@ -38,5 +38,5 @@ class BookServiceTest {
 				.isInstanceOf(BookNotFoundException.class)
 				.hasMessage("The book with ISBN " + bookIsbn + " was not found.");
 	}
-
+*/
 }

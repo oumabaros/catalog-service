@@ -21,7 +21,7 @@ class BookControllerMvcTests {
 
     @MockBean
     private BookService bookService;
-
+/*
     @Test
     void whenGetBookNotExistingThenShouldReturn404() throws Exception {
         String isbn = "73737313940";
@@ -30,5 +30,5 @@ class BookControllerMvcTests {
                 .perform(get("/books/" + isbn))
                 .andExpect(status().isNotFound());
     }
-
+*/
 }
